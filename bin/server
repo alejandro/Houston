@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+/*
+ * server
+ * @date:Sun Mar 25 2012 16:06:16 GMT-0600 (CST)
+ * @name: server
+ * @licence: MIT
+*/
+
+
+module.exports = require('../');
