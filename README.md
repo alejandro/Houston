@@ -1,8 +1,10 @@
 
-# server
+# Houston :: A static files server based on node.js
 
- This is a **README**
+
+ :)
 
 ## Contributors
 
+- [Alejadro Morales](http://github.com/alejandromg)
 - [Kronos](http://github.com/alejandromg/kronos 'npm install kronos') 
