@@ -1,6 +1,6 @@
 {
   "name" : "nhouston",
-  "version" : "0.1.3",
+  "version" : "0.2.0",
   "description":"Houston :: A simple static server based on node.js",
   "author" : "Alejandro Morales <vamg008@gmail.com>",
   "dependencies": {
