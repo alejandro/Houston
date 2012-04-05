@@ -40,7 +40,7 @@ Also you can avoid the new browser window with:
     > houston -b false
 ## Screenshot
 
-<img src="http://dl.dropbox.com/u/29662133/Pantallazo-Houston%20%3A%3A%20-home-alejandromg-dev-server%20-%20Google%20Chrome.png" />
+<img src="http://dl.dropbox.com/u/29662133/Pantallazo-Houston%20%3A%3A%20-home-alejandromg-dev-blackbox%20-%20Google%20Chrome.png" />
 
 ## Help
 
