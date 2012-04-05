@@ -26,77 +26,80 @@
 
   }
   body,html {
-    margin:0;
-    font-family:'houstonRegular';
-    background-color:whitesmoke;
+    margin           : 0;
+    font-family      :'houstonRegular';
+    background-color : whitesmoke;
   }
   header {
-    text-align: center;
-    height: 30px;
-    background: #222;
-    color: white;
-    font-family: 'houstonBold';
-    font-size:24px;
-    padding-top: 14px;
-    -webkit-box-shadow: 2px 2px #ccc,-2px -2px #ccc;
-    -moz-box-shadow: 2px 2px #ccc,-2px -2px #ccc;
-    box-shadow: 2px 2px #ccc,-2px -2px #ccc;
+    text-align         : center;
+    height             : 30px;
+    background         : #222;
+    color              : white;
+    font-family        : 'houstonBold';
+    font-size          : 24px;
+    padding-top        : 14px;
+    -webkit-box-shadow : 2px 2px #ccc,-2px -2px #ccc;
+    -moz-box-shadow    : 2px 2px #ccc,-2px -2px #ccc;
+    box-shadow         : 2px 2px #ccc,-2px -2px #ccc;
   }
   a {text-decoration:none;}
   ul {
     list-style:none;
-    column-count:3; -moz-column-count:3; -webkit-column-count:3; 
-    column-gap:2em; -moz-column-gap:2em; -webkit-column-gap:2em;
+    -moz-column-count:3; -webkit-column-count:3; column-count:3;
+    -moz-column-gap:2em; -webkit-column-gap:2em; column-gap:2em;
   }
   .dir:before{
-    content:url('/public/dir.png');
+    content : url('/public/dir.png');
   }
   .return:before {
-   content:url('/public/return.png'); 
+    content : url('/public/return.png'); 
   }
   li:before {
-   content:url('/public/default.png'); 
-   padding-right:5px;
+    content       : url('/public/default.png'); 
+    padding-right : 5px;
   }
   footer {
-    text-align:center;
+    text-align : center;
   }
   </style>
-    <script type="text/javascript">
+  <script type="text/javascript">
     function onload(){
       var path = window.location.pathname.split('/')
       path.pop();
       if (path.length ==1) path = ['/'];
       else path = path.join('/')
       document.getElementById('return').setAttribute('href',path)
-      var ul = document.getElementsByTagName('ul')[0]
-      var  loop = ul.childNodes.length;
-      var clases=[]
+      var ul     = document.getElementsByTagName('ul')[0]
+        , loop   = ul.childNodes.length
+        , clases = []
+        ;
+
       while (--loop){
-        var li = ul.childNodes.item(loop);
-        var classEl =li.classList[0];
+        var li      = ul.childNodes.item(loop)
+          , classEl = li.classList[0]
+          ;
+
         clases.push(classEl)
       }
       var filt= clases.filter(function(v,i,a){
-        return a.lastIndexOf(v) ===i;
+        return a.lastIndexOf(v) ===i
       })
       filt.forEach(function(classEl){
         var stylesheet = document.getElementsByTagName('style')[0]
-        var rule = '.'+classEl+':before{content: url(\'/public/'+classEl+'.png\');}'
+          , rule = '.'+classEl+':before{content: url(\'/public/'+classEl+'.png\');}';
         stylesheet.sheet.insertRule(rule,stylesheet.sheet.cssRules.length);
       });
       return true;
-  }
+    }
   </script>
   </head>
 <body onload="onload()">
-<header>Houston :: {title}</header>
-<div id="wrapper">
-
-  <div>{list}</div>
-<div>
-<footer>
-<p> Houston {hversion} running on node.js {version}</p>
-</footer>
+  <header>Houston :: {title}</header>
+  <div id="wrapper">
+    <div>{list}</div>
+  <div>
+  <footer>
+    <p> Houston {hversion} running on node.js {version}</p>
+  </footer>
 </body>
 </html>
