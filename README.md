@@ -1,4 +1,3 @@
-
 # Houston :: A static files server based on node.js
  
 A Static file server, simple as you hear.
@@ -9,7 +8,7 @@ The main purpose of Houston is to provide a static, 0 dependencies (just mime), 
 
 Asuming that you have installed [node.js](http://nodejs.org) and [npm](http://npmjs.org)
     
-    > npm install -g houston
+    > npm install -g nhouston
 
 Or:
 
