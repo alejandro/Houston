@@ -1,4 +1,8 @@
 #!/usr/bin/env node 
 
+// Out of silent log...
 
 require('../lib/server');
+console.log('---------------------------------------');
+console.log('|            HOUSTON STARTED           |'.bold.yellow);
+console.log('---------------------------------------');

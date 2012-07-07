@@ -1,20 +1,21 @@
 {
-  "name" : "nhouston",
-  "version" : "0.2.0",
-  "description":"Houston :: A simple static server based on node.js",
-  "author" : "Alejandro Morales <vamg008@gmail.com>",
+  "name": "nhouston",
+  "version": "0.2.0",
+  "description": "Houston :: A simple static server based on node.js",
+  "author": "Alejandro Morales <vamg008@gmail.com>",
   "dependencies": {
-    "mime":"1.2.x"
+    "mime": "1.2.x",
+    "colors": "~0.6.0-1"
   },
-  "repository":{
-    "type":"git",
-    "url":"https://github.com/alejandromg/Houston.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/alejandromg/Houston.git"
   },
-  "bin":{
-    "houston":"./bin/houston"
+  "bin": {
+    "houston": "./bin/houston"
   },
-  "preferGlobal":"true",
-  "main":"./lib/server.js",
+  "preferGlobal": "true",
+  "main": "./lib/server.js",
   "engines": ">0.6.x",
-  "license":"MIT"
+  "license": "MIT"
 }
