@@ -4,7 +4,7 @@ Yet another static file server, simple as you hear.
 
 The main purpose of Houston is to provide a static, 0 dependencies (just mime), server. 
 
-**WARNING** Houston 1.0.x only runs on node-v0.8.x
+**WARNING** Houston 1.0.x only runs on node-v0.8.x. The 0.6.x compatible version is 0.2.1 (`npm install -g nhouston@0.2.1`)
 
 ## Features
 
