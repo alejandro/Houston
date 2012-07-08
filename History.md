@@ -1,4 +1,25 @@
 
+1.0.1 / 2012-07-07 
+==================
+
+  * A better font-size on header 
+  * No more 404 on URL with spaces 
+  * Fix Content-type on 404 response 
+  * More examples 
+  * New Font "Pontano Sans" 
+  * New Option Key: 'ignorePort' (View example `simple')
+
+1.0.0 / 2012-07-07 
+==================
+
+  *  Static Server 
+  *  SPDY, HTTPS
+  *  websockets support 
+  *  More customizable 
+  *  Faster (10x)
+  *  Examples 
+  *  Propertly handles 304 codes (ETag) 
+   
 n.n.n / 2012-04-05 
 ==================
 
