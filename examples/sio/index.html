@@ -1,0 +1,8 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io.connect(window.location);
+  socket.on('news', function (data) {
+    document.write(JSON.stringify(data, null, 2)+'<br>');
+    socket.emit('my other event', { my: 'data' });
+  });
+</script>
