@@ -1,10 +1,21 @@
 # Houston :: A static files server based on node.js
  
-A Static file server, simple as you hear.
+Yet another static file server, simple as you hear.
 
 The main purpose of Houston is to provide a static, 0 dependencies (just mime), server. 
 
 **WARNING** Houston 1.0.x only runs on node-v0.8.x
+
+## Features
+
+Houston initially was made to provide a cli-server. But the ability to create cli apps with custom servers make me re-think about this. Still Houston is a cli-server but with the followed features in order to you:
+
+-  spdy, https support
+-  houston is an instance of a server, so you can tweak an put socket.io in from of it
+-  `cli: true` enable cli features like process.argv parser and more -> (houston#config)
+- static file server
+- If Houston can handle the event it'll let you the task. (e.g. `houston.on('POST', function(req, res){/* the response code */}))`
+
 
 ## Installation
 
@@ -61,6 +72,7 @@ Where options can be:
       cli    : true, // to emule cli behavior (list files on dirs, open browser and more)
     }
 
+See more in the examples dir.
 
 ## Screenshot
 
@@ -82,6 +94,14 @@ Where options can be:
 
     :: end of help ::
 
+## Alternatives
+
+For sure that Houston is not the first option to static file servers, there are a bunch of other static file providers, with better support:
+
+-  [ecstatic](https://github.com/jesusabdullah/node-ecstatic)
+-  connect static middleware
+
+And many others.
 
 ## Contributors
 
