@@ -15,7 +15,7 @@ Houston initially was made to provide a cli-server. But the ability to create cl
 -  houston is an instance of a server, so you can tweak an put socket.io in from of it
 -  `cli: true` enable cli features like process.argv parser and more -> (houston#config)
 -  websockets support (see socket.io example)
-- If Houston can handle the event it'll let you the task. (e.g. `houston.on('POST', function(req, res){/* the response code */}))`
+- If Houston can't handle the event it'll let you the task. (e.g. `houston.on('POST', function(req, res){/* the response code */}))`
 
 
 ## Installation
