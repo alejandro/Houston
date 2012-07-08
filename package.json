@@ -16,7 +16,7 @@
   },
   "preferGlobal": "true",
   "main": "./lib/server.js",
-  "engines": ">0.6.x",
+  "engines": ">0.7.x",
   "license": "MIT",
   "optionalDependencies": {
     "spdy": "~1.2.1"
