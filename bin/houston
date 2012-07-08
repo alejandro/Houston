@@ -2,7 +2,10 @@
 
 // Out of silent log...
 
-require('../lib/server');
+var c = require('../lib/server')({cli: true});
+
+
+
 console.log('---------------------------------------');
 console.log('|            HOUSTON STARTED           |'.bold.yellow);
 console.log('---------------------------------------');

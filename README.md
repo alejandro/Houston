@@ -4,6 +4,8 @@ A Static file server, simple as you hear.
 
 The main purpose of Houston is to provide a static, 0 dependencies (just mime), server. 
 
+**WARNING** Houston 1.0.x only runs on node-v0.8.x
+
 ## Installation
 
 Asuming that you have installed [node.js](http://nodejs.org) and [npm](http://npmjs.org)
@@ -37,6 +39,29 @@ All of them are valid, also you can define a different path:
 Also you can avoid the new browser window with:
 
     > houston -b false
+
+## Static server
+
+Houston, as well, has a static file server built-in. So if you want to use Houston as your static files provider use it as follows:
+
+    var houston = require('nhouston');
+    var server = houston(options);
+
+Where options can be:
+
+    { 
+      path : __dirname + '/public', // to serve files from public folder
+      port : 3001, // the port that houston will bind to listen
+      spdy : { // To create an spdy server (npm install spdy), this can be https too
+        key: fs.readFileSync(__dirname + '/keys/spdy-key.pem'),
+        cert: fs.readFileSync(__dirname + '/keys/spdy-cert.pem'),
+        ca: fs.readFileSync(__dirname + '/keys/spdy-csr.pem')
+      },
+      silent : true, // Log options: false as default
+      cli    : true, // to emule cli behavior (list files on dirs, open browser and more)
+    }
+
+
 ## Screenshot
 
 <img src="http://dl.dropbox.com/u/29662133/Pantallazo-Houston%20%3A%3A%20-home-alejandromg-dev-blackbox%20-%20Google%20Chrome.png" />

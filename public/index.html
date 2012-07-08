@@ -86,7 +86,7 @@
       })
       filt.forEach(function(classEl){
         var stylesheet = document.getElementsByTagName('style')[0]
-          , rule = '.'+classEl+':before{content: url(\'/public/'+classEl+'.png\');}';
+          , rule = '.'+classEl+':before{content: url(\'/public/'+classEl+'.png\') !important;}';
         stylesheet.sheet.insertRule(rule,stylesheet.sheet.cssRules.length);
       });
       return true;
