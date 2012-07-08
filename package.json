@@ -17,5 +17,8 @@
   "preferGlobal": "true",
   "main": "./lib/server.js",
   "engines": ">0.6.x",
-  "license": "MIT"
+  "license": "MIT",
+  "optionalDependencies": {
+    "spdy": "~1.2.1"
+  }
 }
