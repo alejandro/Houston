@@ -4,7 +4,7 @@ Yet another static file server, simple as you hear.
 
 The main purpose of Houston is to provide a static, 0 dependencies (just mime), server. 
 
-**WARNING** Houston 1.0.x only runs on node-v0.8.x. The 0.6.x compatible version is 0.2.1 (`npm install -g nhouston@0.2.1`)
+**WARNING** Houston >1.0.x only runs on node-v0.8.x. The 0.6.x compatible version is 0.2.1 (`npm install -g nhouston@0.2.1`)
 
 ## Features
 
@@ -17,6 +17,21 @@ Houston initially was made to provide a cli-server. But the ability to create cl
 -  websockets support (see socket.io example)
 - If Houston can't handle the event it'll let you the task. (e.g. `houston.on('POST', function(req, res){/* the response code */}))`
 -  Custom Actions for Files. E.g. Markdown files rendered on the fly
+-  Extend method. So you can update custom actions to files like:
+
+        
+        Houston.extend({
+                js: function (req, res) {                       
+                        var file = req.file
+                        res.end('w00t you requested ' + file)
+                }
+        })
+        
+        Houston.createServer(/* blah */)
+
+  curl http://myser.ver/path/to/a/js/file.js
+  => w00t you requested /path/to/a/js/file.js
+
 
 ## Installation
 

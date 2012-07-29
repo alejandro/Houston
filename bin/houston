@@ -1,10 +1,6 @@
 #!/usr/bin/env node 
 
-// Out of silent log...
-
-var c = require('../lib/server').createServer({cli: true});
-
-
+require('../lib/server').createServer({cli: true});
 
 console.log('---------------------------------------');
 console.log('|            HOUSTON STARTED           |'.bold.yellow);
