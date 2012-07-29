@@ -16,7 +16,7 @@ Houston initially was made to provide a cli-server. But the ability to create cl
 -  `cli: true` enable cli features like process.argv parser and more -> (houston#config)
 -  websockets support (see socket.io example)
 - If Houston can't handle the event it'll let you the task. (e.g. `houston.on('POST', function(req, res){/* the response code */}))`
-
+-  Custom Actions for Files. E.g. Markdown files rendered on the fly
 
 ## Installation
 

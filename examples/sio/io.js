@@ -5,7 +5,7 @@ var options = {
 	port: 8080
 };
 
-var app = require('../lib/server')(options)
+var app = require('../lib/server').createServer(options)
   , io = io.listen(app)
   ;
 

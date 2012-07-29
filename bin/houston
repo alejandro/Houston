@@ -2,7 +2,7 @@
 
 // Out of silent log...
 
-var c = require('../lib/server')({cli: true});
+var c = require('../lib/server').createServer({cli: true});
 
 
 

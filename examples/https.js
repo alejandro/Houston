@@ -12,4 +12,4 @@ var options =  {
 
 var houston = require('../lib/server');
 
-var server  = houston(options);
+var server  = houston.createServer(options);

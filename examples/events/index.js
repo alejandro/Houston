@@ -1,7 +1,7 @@
 var qs = require('querystring');
 var houston = require('../../lib/server');
 
-var server  = houston({
+var server  = houston.createServer({
 	path: __dirname + '/public',
 	verbose: true,
 	port: 8001
