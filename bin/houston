@@ -1,7 +1,15 @@
 #!/usr/bin/env node 
 
-require('../lib/server').createServer({cli: true});
+var Houston = require('../lib/server')
 
-console.log('---------------------------------------');
-console.log('|            HOUSTON STARTED           |'.bold.yellow);
-console.log('---------------------------------------');
+Houston.extend({
+    "markdown": function render (req,res) {
+        return this.md.apply(this, arguments)
+    }
+})
+
+Houston.createServer({cli: true})
+
+console.log('---------------------------------------')
+console.log('|            HOUSTON STARTED           |'.bold.yellow)
+console.log('---------------------------------------')
