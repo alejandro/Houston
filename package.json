@@ -18,7 +18,13 @@
   "main": "./lib/server.js",
   "engines": ">0.7.x",
   "license": "MIT",
+  "scripts":{
+   "test": "node test/test-*.js"
+  },
   "optionalDependencies": {
     "spdy": "~1.2.1"
+  },
+  "devDependencies":{
+     "request":"latest"
   }
 }

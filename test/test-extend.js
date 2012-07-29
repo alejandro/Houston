@@ -25,16 +25,16 @@ assert.equal(server instanceof http.Server, true)
 util.print(' ok!\n'.bold.green);
 
 util.print('server should response with "TEST"');
-request('http://localhost:' + process.env.PORT+'/', function(err, res){
+request('http://localhost:' + process.env.PORT + '/', function(err, res){
     if (err) throw err;
     assert.equal(res.body, '<h1>TEST</h1>');
     ++succeed;
     util.print(' ok!\n'.bold.green);
     util.print('server should response with "invalid file"');
-    request('http://localhost:' + process.env.PORT+'/dot.js', function(err, res){
+    request('http://localhost:' + process.env.PORT + '/dot.js', function(err, res){
         if (err) throw err;
         assert.equal(res.statusCode, 501, 'Should response with 501')
-        assert.equal(!!~res.body.search('Invalid file'), true,'should response with failed');
+        assert.equal(!!~res.body.search('Invalid file'), true, 'should response with failed');
         ++succeed;
         util.print(' ok!\n'.bold.green);
         util.print('server should response with content of the file');
