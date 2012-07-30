@@ -1,4 +1,4 @@
-# Houston :: A static files server based on node.js
+  # Houston :: A static files server based on node.js
  
 Yet another static file server, simple as you hear.
 
@@ -17,7 +17,7 @@ Houston initially was made to provide a cli-server. But the ability to create cl
 -  websockets support (see socket.io example)
 - If Houston can't handle the event it'll let you the task. (e.g. `houston.on('POST', function(req, res){/* the response code */}))`
 -  Custom Actions for Files. E.g. Markdown files rendered on the fly
--  Extend method. So you can update custom actions to files like:
+-  Extend method. Customized actions to files like:
 
         
         Houston.extend({
@@ -122,8 +122,8 @@ And many others.
 ## Contributors
 
 - [Alejadro Morales](http://github.com/alejandromg)
-- [Kronos](http://github.com/alejandromg/kronos 'npm install kronos') 
 
 ## License
 
-MIT 2012
+MIT
+Alejandro Morales (c) 2012
