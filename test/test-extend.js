@@ -41,7 +41,7 @@ request('http://localhost:' + process.env.PORT + '/', function(err, res){
         request('http://localhost:' + process.env.PORT + '/file.fixed', function(err, res){
             if (err) throw err;
             // Should return the file content
-            assert.equal(res.body,'file.fixed');
+            assert.equal(res.body, 'file.fixed');
             ++succeed;
             util.print(' ok!\n'.bold.green);
             process.emit('end')
