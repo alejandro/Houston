@@ -22,7 +22,8 @@
    "test": "node test/test-*.js"
   },
   "optionalDependencies": {
-    "spdy": "~1.2.1"
+    "spdy": "~1.2.1", 
+    "github-flavored-markdown":"*"
   },
   "devDependencies":{
      "request":"latest"
