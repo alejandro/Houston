@@ -1,25 +1,21 @@
 {
   "name": "nhouston",
-  "version": "2.0.0",
-  "description": "Houston :: A simple static server based on node.js",
+  "version": "0.0.0",
+  "description": "Houston :: A simple static server based on luvit",
   "author": "Alejandro Morales <vamg008@gmail.com>",
-  "dependencies": {
-    "mime": "1.2.x",
-    "colors": "~0.6.0-1"
-  },
   "repository": {
     "type": "git",
-    "url": "https://github.com/alejandromg/Houston.git"
+    "url": "https://github.com/alejandromg/Houston.git#lua"
   },
   "bin": {
     "houston": "./bin/houston"
   },
   "preferGlobal": "true",
   "main": "./lib/server.js",
-  "engines": ">0.7.x",
+  "engines": "0.5.x",
   "license": "MIT",
   "scripts":{
-   "test": "node test/test-*.js"
+   "test": "luvit test/test-*.js"
   },
   "optionalDependencies": {
     "spdy": "~1.2.1", 
