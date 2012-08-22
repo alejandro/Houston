@@ -2,3 +2,4 @@ ace
 examples
 
 test
+*.lua
