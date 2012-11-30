@@ -1,16 +1,44 @@
-#!/usr/bin/env node 
+#!/usr/bin/env node
 
-var Houston = require('../lib/server')
+"use strict";
 
-Houston.extend({
-    "markdown": function render (req,res) {
-        return this.md.apply(this, arguments)
+var Houston = require('../lib')
+  , startsWith = Houston.utils.startsWith
+  , def = {
+      port   : 8100,
+      verbose: true,
+      list   : true
     }
+  , cfg = new Houston.utils.CustomObject(def)
+  
+
+
+
+!function parseArgs() {
+  var args = process.argv, arg, val
+  while (arg = args.shift()){
+    if (startsWith(arg, '--|-')) {
+      arg = arg.replace(/--|-/,'')
+      if (~arg.indexOf('=')){
+        arg = arg.split('=')
+        val = arg[1], arg = arg[0]
+      } else {
+        val = args.shift()
+      }
+      
+      if (!val) return cfg[arg] = true
+      
+      if (startsWith(val, '--|-')) {
+        cfg[arg] = true, args = [val].concat(args)
+      } else {
+        cfg[arg] = val
+      }
+    }
+  }
+}()
+
+var server = Houston.createServer(cfg)
+
+server.listen(cfg.get('port'), function (){
+    console.log('[*] Server listening on %d', this.address().port)
 })
-
-
-Houston.createServer({cli: true})
-
-console.log('---------------------------------------')
-console.log('|            HOUSTON STARTED           |'.bold.yellow)
-console.log('---------------------------------------')
