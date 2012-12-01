@@ -3,7 +3,7 @@
 "use strict";
 
 var Houston = require('../lib')
-  , startsWith = Houston.utils.startsWith
+  , startsWith = Houston.helpers.startsWith
   , def = {
       port   : 8100,
       verbose: true,
