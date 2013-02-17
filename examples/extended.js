@@ -2,8 +2,8 @@
 var Houston = require('../lib/server');
 
 Houston.extend({
-    'js':  function (dir, res) {
-        return res.end(dir);
+    'js':  function (req, res) {
+        return res.end('You requested: ' + String(req.file));
     }
 })
 

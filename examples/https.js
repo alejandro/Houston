@@ -7,7 +7,7 @@ var options =  {
     cert: fs.readFileSync(__dirname + '/keys/spdy-cert.pem'),
     ca: fs.readFileSync(__dirname + '/keys/spdy-csr.pem')
   },
-  verbose : false // Log options: false as default
+  verbose : true // Log options: false as default
 }
 
 var houston = require('../lib/server');
